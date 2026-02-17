@@ -1,6 +1,19 @@
 @import "tailwindcss";
 
 body {
-  background-color: #0f0f0f;
-  color: white;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+}
+
+.dark{
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+.container{
+  width: 100vw;
+  min-height: 100vh;
+  background: #0066CC;
 }
