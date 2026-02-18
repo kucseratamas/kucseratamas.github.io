@@ -1,12 +1,22 @@
 import React from "react";
 import './Navbar.css'
-import logo_light from '../assets/switch.png'
 import logo_dark from '../assets/switch (1).png'
+import logo_light from '../assets/toggle-button.png'
 
-const Navbar = () => {
+const Navbar = ({theme, setTheme}) => {
+
+    const toggle_mode = () => {
+        if (theme == 'light') {
+            setTheme('dark')
+        }
+        else{
+            setTheme('light');
+        }
+    }
+
     return(
         <div className="navbar">
-            <img src="" alt="" className="logo"/>
+            <h1 className="portfolio">Portfolio</h1>
             <ul>
                 <li>Home</li>
                 <li>About</li>
@@ -16,7 +26,7 @@ const Navbar = () => {
                 <li>Contact</li>
             </ul>
 
-            <img src={logo_dark} alt="" className="toggleicon"/>
+            <img onClick={()=>toggle_mode()} src={theme == 'light' ? logo_light : logo_dark} alt="" className="toggleicon"/>
         </div>
     )
 }

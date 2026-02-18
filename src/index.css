@@ -1,19 +1,16 @@
-body {
+*{
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   overflow-x: hidden;
-  background-color: #ffffff;
-  color: rgb(0, 0, 0);
-}
-
-.dark{
-  color-scheme: dark;
-}
-
-html {
-  scroll-behavior: smooth;
+  font-family: sans-serif;
 }
 .container{
   width: 100%;
   min-height: 100vh;
   background: #0066CC;
+  transition: 0.5s;
+}
+.container.dark{
+  background: #222;
 }
