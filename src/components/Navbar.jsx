@@ -45,10 +45,10 @@ const Navbar = ({theme, setTheme}) => {
         if(!musicOn) return;
         if (theme == 'dark') {
             rainAudio.current.play();
-            rainAudio.current.volume = 0.3;
+            rainAudio.current.volume = 0.2;
         }else{
             happyAudio.current.play();
-            happyAudio.current.volume = 0.3;
+            happyAudio.current.volume = 0.2;
         }
     },[theme, musicOn]);
 
