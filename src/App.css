@@ -1,1 +1,13 @@
 
+body {
+  min-height: 200vh;
+  transition: background 0.3s ease;
+}
+body.light {
+  background: linear-gradient(120deg, #e0f2fe, #ffffff);
+  color: #0f172a;
+}
+body.dark {
+  background: linear-gradient(120deg, #0f172a, #1e293b);
+  color: white;
+}

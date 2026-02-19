@@ -18,12 +18,12 @@ const Navbar = ({theme, setTheme}) => {
         <div className="navbar">
             <h1 className="portfolio">Portfolio</h1>
             <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Skills</li>
-                <li>Projects</li>
-                <li>Hobbies</li>
-                <li>Contact</li>
+                <li><span>Home</span></li>
+                <li><span>About</span></li>
+                <li><span>Skills</span></li>
+                <li><span>Projects</span></li>
+                <li><span>Hobbies</span></li>
+                <li><span>Contact</span></li>
             </ul>
 
             <img onClick={()=>toggle_mode()} src={theme == 'light' ? logo_light : logo_dark} alt="" className="toggleicon"/>
