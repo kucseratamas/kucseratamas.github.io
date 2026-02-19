@@ -22,8 +22,19 @@
     transition: all 0.3s ease;
     overflow: hidden;
 }
+.controls{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
 .toggleicon{
     width: 45px;
+    cursor: pointer;
+}
+.musicButton{
+    width: 30px;
+    height: 30px;
     cursor: pointer;
 }
 .logo{
