@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './App.css'
 import Navbar from './components/Navbar'
 import audio1 from './assets/Instinct - Rainy Train Ride.mp3'
+import Home from './components/Home'
 
   const App = () => {
 
@@ -14,6 +15,7 @@ import audio1 from './assets/Instinct - Rainy Train Ride.mp3'
   return (
       <div className={`container ${theme}`}>
         <Navbar theme={theme} setTheme={setTheme}/>
+        <Home/>
       </div>
       
   )
