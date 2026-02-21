@@ -10,12 +10,11 @@
 .socialIcons{
     display: flex;
     gap: 35px;
-    position: absolute; 
-    top: 31%;            
-    transform: translateY(-65%);
-    flex-direction:row;
-    z-index: 1000;
-    margin-top: 65px;
+    position: absolute;           
+    margin-top: -190px;
+    flex-wrap: wrap;
+    left: 10%;
+    align-items: center;
 }
 .socialIcon{
     width: 50px;
