@@ -1,5 +1,74 @@
+section {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.scroll-area {
+  height: 100vh;
+  scroll-snap-align: start;
+}
+.home,
+.homeAbout,
+.homeSkills,
+.homeProjects,
+.homeHobbies,
+.homeContact {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding: 0 10%;
+}
 .home{
-    min-height: 100vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10%;
+    gap: 20px;
+    transition: 1s ease;
+    padding-top: 60px;
+}
+.homeAbout{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10%;
+    gap: 20px;
+    transition: 1s ease;
+}
+.homeSkills{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10%;
+    gap: 20px;
+    transition: 1s ease;
+}
+.homeProjects{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10%;
+    gap: 20px;
+    transition: 1s ease;
+}
+.homeHobbies{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10%;
+    gap: 20px;
+    transition: 1s ease;
+}
+.homeContact{
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -9,9 +78,8 @@
 }
 .socialIcons{
     display: flex;
-    gap: 35px;
-    position: absolute;           
-    margin-top: -190px;
+    gap: 35px;          
+    margin-top: 30px;
     flex-wrap: wrap;
     left: 10%;
     align-items: center;
@@ -30,19 +98,22 @@
 .greeting{
     font-family: sans-serif;
     font-size: 58px;
-    display: flex;
-    position:absolute;
+    padding-top: 15px;
 }
 .introduction{
     font-family: sans-serif;
     font-size:  20px;
     max-width: 600px;
-    display: flex;
-    position:absolute;
-    margin-top: 160px;
+    padding-bottom: 40px;
+
+}
+.homeAbout .introduction{
+    font-family: sans-serif;
+    max-width: 600px;
+
     
 }
-.dark{
+.dark .home{
     background: linear-gradient(
     to bottom right, 
     #33057e 30%,      
@@ -52,16 +123,108 @@
     color: #fff;
     transition: 1s;
 }
+.dark .homeAbout{
+    background: linear-gradient(
+    to bottom right, 
+    #33057e 30%,      
+    #000000 70%,    
+    rgb(0, 0, 0) 100%
+);
+    color: #fff;
+    transition: 1s;
+}
+.dark .homeSkills{
+    background: linear-gradient(
+    to top left, 
+    #000000 20%,      
+    #4b0404 70%
+);
+    color: #fff;
+    transition: 1s;
+}
+.dark .homeProjects{
+   background: linear-gradient(
+    to top left, 
+    #000000 20%,      
+    #004666e3 70%
+);
+    color: #fff;
+    transition: 1s; 
+}
+.dark .homeHobbies{
+   background: linear-gradient(
+    to top left,   
+    #000000 30%,  
+    #004666e3 70%
+);
+    color: #fff;
+    transition: 1s; 
+}
+.dark .homeContact{
+   background: linear-gradient(
+    to top left,   
+    #000000 20%,  
+    #505050 70%
+);
+    color: #fff;
+    transition: 1s; 
+}
 .dark .introduction{
     color: rgb(163, 163, 163);
     transition: 1s;
 }
-.light{
+.light .home{
     background: linear-gradient(
-    to bottom right, 
-    #a6edff 20%,      
-    #ffffff 80%,    
+    to top left, 
+    #05077e 10%,      
+    #ffffff 100%,    
     rgb(255, 255, 255) 100%
+);
+    color: black;
+}
+.light .homeAbout{
+    background: linear-gradient(
+    to top left, 
+    #05077e 10%,      
+    #ffffff 100%,    
+    rgb(255, 255, 255) 100%
+);
+    color: black;
+}
+.light .homeSkills{
+    background: linear-gradient(
+    to top left,
+    #4b0404 10%, 
+    #ffffff 70%,      
+    rgb(255, 255, 255) 100%
+);
+    color: black;
+}
+.light .homeProjects{
+    background: linear-gradient(
+    to top left,
+    #004666e3 10%, 
+    #ffffff 70%,      
+    rgb(255, 255, 255) 100%
+);
+    color: black;
+}
+.light .homeHobbies{
+    background: linear-gradient(
+    to top left,
+    #004666e3 10%, 
+    #ffffff 70%,      
+    rgb(255, 255, 255) 100%
+);
+    color: black;
+    color: black;
+}
+.light .homeContact{
+    background: linear-gradient(
+    to top left, 
+    #505050  10%,      
+    #ffffff 70%,    
+    rgb(255, 255, 255) 80%
 );
     color: black;
 }
@@ -77,12 +240,29 @@ transition: 1s;
 background-image: linear-gradient(to bottom right,rgba(105, 8, 8, 0.35),#0a5385);
 transition: 1s; 
 }
+.light .homeSkills .cvdownload{
+    background-image: linear-gradient(to bottom right,rgb(99, 99, 99),rgb(105, 8, 8),#00000065);
+}
+.light .homeSkills .learnmore{
+   background-image: linear-gradient(to bottom right,rgb(99, 99, 99),rgb(105, 8, 8),#00000065);
+}
+.light .homeAbout .cvdownload{
+    background-image: linear-gradient(to bottom right,rgba(105, 8, 8, 0.35),#0a5385);
+}
+.light .homeAbout .learnmore{
+   background-image: linear-gradient(to bottom right,rgba(105, 8, 8, 0.35),#093363);
+}
+.light .homeContact .cvdownload{
+    background-image: linear-gradient(to bottom right,rgb(99, 99, 99),#5f5f5f,#000000);
+}
+.light .homeContact .learnmore{
+    background-image: linear-gradient(to bottom right,rgb(99, 99, 99),#585858,#000000);
+}
+
 .homebuttons {
     display: flex;
     gap: 20px;
-    margin-top: 410px;
     flex-wrap: wrap;
-    position:absolute;
     left: 10%;
     align-items: center;
 }
@@ -98,18 +278,32 @@ transition: 1s;
     align-items: center;
     text-decoration: none;
     gap: 5px;
-    background-image: linear-gradient(to bottom right,rgba(105, 8, 8, 0.35),#580ce4);   
+    background-image: linear-gradient(to top left,rgba(0, 0, 0, 0),#5d42949f); 
     position: relative;
     overflow: hidden;
     transition: color 0.3s ease;
 
 }
-
+.homeAbout .cvdownload{
+    background-image: linear-gradient(to bottom right,rgba(99, 99, 99, 0.39),rgba(105, 8, 8, 0.247),#00000065);
+}
+.homeSkills .cvdownload{
+    background-image: linear-gradient(to bottom right,rgba(99, 99, 99, 0.39),rgba(105, 8, 8, 0.247),#00000065);
+}
+.homeProjects .cvdownload{
+    background-image: linear-gradient(to bottom right,rgba(99, 99, 99, 0.39),#004666e3,#00000065);
+}
+.homeHobbies .cvdownload{
+    background-image: linear-gradient(to bottom right,rgba(99, 99, 99, 0.39),#004666e3,#00000065);
+}
+.homeContact .cvdownload{
+    background-image: linear-gradient(to bottom right,rgba(99, 99, 99, 0.39),#aaaaaa3b,#00000065);
+}
 .cvdownload::before {
     content: "";
     position: absolute;
     inset: 0;
-    background-image: linear-gradient(to bottom right, rgba(18, 8, 105, 0.35), #000000);
+    background-image: linear-gradient(to bottom, rgba(18, 8, 105, 0.35), #000000);
     opacity: 0;
     transition: opacity 0.4s ease;
     transition: 1s;
@@ -136,10 +330,50 @@ transition: 1s;
     align-items: center;
     text-decoration: none;
     gap: 5px;
-    background-image: linear-gradient(to top left,rgba(0, 0, 0, 0.35),#5e4294);
+    background-image: linear-gradient(to top left,rgba(0, 0, 0, 0),#5d42949f);
     position: relative;
     overflow: hidden;
     transition: color 0.3s ease;
+}
+.learnmore{
+    font-family: sans-serif;
+    font-size: 20px;
+    padding: 15px 25px;
+    cursor: pointer;
+    color: rgb(224, 224, 224);
+    border: none;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 5px;
+    background-image: linear-gradient(to bottom right,rgba(99, 99, 99, 0.39),rgba(105, 8, 8, 0.247),#00000065);
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease;
+    
+}
+.homeProjects .learnmore{
+    background-image: linear-gradient(to bottom right,rgba(99, 99, 99, 0.39),#004666e3,#00000065);
+}
+.homeHobbies .learnmore{
+    background-image: linear-gradient(to bottom right,rgba(99, 99, 99, 0.39),#004666e3,#00000065);
+}
+.homeContact .learnmore{
+    background-image: linear-gradient(to bottom right,rgba(99, 99, 99, 0.39),#aaaaaa3b,#00000065);
+}
+.learnmore::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(to bottom right, rgba(18, 8, 105, 0.35), #000000);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    transition: 1s;
+    z-index: 0;
+}
+.learnmore:hover::before {
+    opacity: 0.4;
 }
 .contactme::before {
     content: "";
