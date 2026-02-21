@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+    transition: 1s;
 }
 .navbar{
     width: 100%;
@@ -21,6 +22,8 @@
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
     overflow: hidden;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+
 }
 .controls{
     display: flex;
@@ -54,7 +57,6 @@ ul li{
     line-height: 40px;     
     text-align: center;    
     cursor: pointer;
-    transition: transform 0.3s ease, color 0.3s ease;
 }
 ul li:hover{
     transform: scale(1.2);
@@ -66,5 +68,4 @@ ul li:hover{
     background: rgba(15, 23, 42, 0.6);
     color: #fff;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
