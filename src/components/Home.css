@@ -5,7 +5,7 @@
     justify-content: center;
     padding: 0 10%;
     gap: 20px;
-
+    transition: 1s ease;
 }
 .socialIcons{
     display: flex;
@@ -24,8 +24,8 @@
     transition: transform 0.2s ease, opacity 0.2s ease;
 }
 .socialIcon:hover {
-  transform: scale(1.15);
-  opacity: 0.8;
+    transform: scale(1.15);
+    opacity: 0.8;
 }
 .greeting{
     font-family: sans-serif;
@@ -50,16 +50,32 @@
     rgb(0, 0, 0) 100%
 );
     color: #fff;
+    transition: 1s;
 }
 .dark .introduction{
     color: rgb(163, 163, 163);
+    transition: 1s;
 }
 .light{
+    background: linear-gradient(
+    to bottom right, 
+    #a6edff 20%,      
+    #ffffff 80%,    
+    rgb(255, 255, 255) 100%
+);
     color: black;
 }
 .light .introduction{
     color: rgb(63, 63, 63);
-
+    transition: 1s;
+}
+.light .contactme{
+background-image: linear-gradient(to bottom right,rgba(105, 8, 8, 0.35),#093363);
+transition: 1s;
+}
+.light .cvdownload{
+background-image: linear-gradient(to bottom right,rgba(105, 8, 8, 0.35),#0a5385);
+transition: 1s; 
 }
 .homebuttons {
     display: flex;
@@ -75,15 +91,35 @@
     font-size: 20px;
     padding: 15px 25px;
     cursor: pointer;
-    color: white;
+    color: rgb(224, 224, 224);
     border: none;
     border-radius: 50px;
     display: inline-flex;
     align-items: center;
     text-decoration: none;
     gap: 5px;
-    background-image: linear-gradient(to bottom right,rgba(105, 8, 8, 0.35),#0c7be4);
+    background-image: linear-gradient(to bottom right,rgba(105, 8, 8, 0.35),#580ce4);   
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease;
+
 }
+
+.cvdownload::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(to bottom right, rgba(18, 8, 105, 0.35), #000000);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    transition: 1s;
+    z-index: 0;
+}
+
+.cvdownload:hover::before {
+    opacity: 0.4;
+}
+
 .btnIcon {
   width: 20px;
   height: 20px;
@@ -93,12 +129,28 @@
     font-size: 20px;
     padding: 15px 25px;
     cursor: pointer;
-    color: white;
+    color: rgb(224, 224, 224);
     border: none;
     border-radius: 50px;
     display: inline-flex;
     align-items: center;
     text-decoration: none;
     gap: 5px;
-    background-image: linear-gradient(to bottom right,#0c7be4,rgba(105, 8, 8, 0.35));
+    background-image: linear-gradient(to top left,rgba(0, 0, 0, 0.35),#5e4294);
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease;
+}
+.contactme::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(to bottom right, rgba(18, 8, 105, 0.35), #000000);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    transition: 1s;
+    z-index: 0;
+}
+.contactme:hover::before {
+    opacity: 0.4;
 }
