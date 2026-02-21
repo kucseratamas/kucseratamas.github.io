@@ -4,6 +4,8 @@ import linkedin from '../assets/linkedin.png'
 import github from '../assets/github.png'
 import './Home.css'
 import { href } from 'react-router-dom'
+import download from '../assets/download.png'
+import cv from '../assets/CV.pdf'
 
 const Home = () => {
     const socialIcons = [
@@ -17,11 +19,14 @@ const Home = () => {
         <div className="home">
             <h1 className="greeting">Hi, I'm Tamás Kucsera</h1>
             <h2 className="introduction">Computer Engineering graduate specialized in Software Design and Development.
-            Focused on VR, web, and mobile application development.
+            Focused on VR, web and mobile application development.
             </h2>
             <div className='homebuttons'>
-                <button className="cvdownload">Download CV</button>
-                <button className="contactme">Contact Me</button>
+                <a href={cv} download className="cvdownload">
+                    <img src={download} alt="" className="btnIcon" />
+                Download CV
+                </a>
+                <a className="contactme">Contact Me</a>
             </div>
             <div className="socialIcons">
                 {socialIcons.map((item, index) => (
