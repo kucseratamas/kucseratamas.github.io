@@ -6,6 +6,7 @@ import '../components/Home.css'
 import { href } from 'react-router-dom'
 import download from '../assets/download.png'
 import cv from '../assets/CV.pdf'
+import { Link } from "react-router-dom";
 
 const Home = () => {
     const socialIcons = [
@@ -34,7 +35,7 @@ const Home = () => {
                         <img src={download} alt="" className="btnIcon" />
                     Download CV
                     </a>
-                    <a className="contactme">Contact Me</a>
+                    <Link to="/contact" className="contactme">Contact Me</Link>
                 </div>
             </div>
             
@@ -48,7 +49,7 @@ const Home = () => {
                             <img src={download} alt="" className="btnIcon" />
                         Download CV
                         </a>
-                        <a className="learnmore">Learn More</a>
+                        <Link to="/about" className="learnmore">Learn More</Link>
                     </div>
                 </div>
                 
@@ -62,7 +63,7 @@ const Home = () => {
                             <img src={download} alt="" className="btnIcon" />
                         Download CV
                         </a>
-                        <a className="learnmore">Learn More</a>
+                        <Link to="/skills" className="learnmore">Learn More</Link>
                     </div>
                 </div>
                 
@@ -75,7 +76,7 @@ const Home = () => {
                             <img src={download} alt="" className="btnIcon" />
                         Download CV
                         </a>
-                        <a className="learnmore">Learn More</a>
+                        <Link to="/projects" className="learnmore">Learn More</Link>
                     </div>
                 </div>
 
@@ -89,7 +90,7 @@ const Home = () => {
                             <img src={download} alt="" className="btnIcon" />
                         Download CV
                         </a>
-                        <a className="learnmore">Learn More</a>
+                        <Link to="/hobbies" className="learnmore">Learn More</Link>
                     </div>
                 </div>
 
@@ -102,7 +103,7 @@ const Home = () => {
                             <img src={download} alt="" className="btnIcon" />
                         Download CV
                         </a>
-                        <a className="learnmore">Learn More</a>
+                        <Link to="/contact" className="learnmore">Learn More</Link>
                     </div>
                 </div>
         </section>
