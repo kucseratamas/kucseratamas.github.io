@@ -8,6 +8,7 @@ import audioOn_logo_black from '../assets/musicon.png'
 import audioOff_logo_black from '../assets/musicoff.png'
 import audioOn_logo_blue from '../assets/musiconblue.png'
 import audioOff_logo_blue from '../assets/musicoffblue.png'
+import { Link } from "react-router-dom";
 
 const Navbar = ({theme, setTheme}) => {
 
@@ -56,12 +57,12 @@ const Navbar = ({theme, setTheme}) => {
         <div className="navbar">
             <h1 className="portfolio">Portfolio</h1>
             <ul>
-                <li><span>Home</span></li>
-                <li><span>About</span></li>
-                <li><span>Skills</span></li>
-                <li><span>Projects</span></li>
-                <li><span>Hobbies</span></li>
-                <li><span>Contact</span></li>
+                <Link to="/"><li>Home</li></Link>
+                <Link to="/about"><li>About</li></Link>
+                <Link to="/skills"><li>Skills</li></Link>
+                <Link to="/projects"><li>Projects</li></Link>
+                <Link to="/hobbies"><li>Hobbies</li></Link>
+                <Link to="/contact"><li>Contact</li></Link>
             </ul>
             <div className="controls">
                 <img onClick={toggle_music} src={getAudioIcon()} alt="" className="musicButton"/>

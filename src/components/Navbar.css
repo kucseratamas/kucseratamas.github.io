@@ -22,7 +22,17 @@
     overflow: hidden;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
+    
 
+}
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar a:visited {
+  color: white;
+  text-decoration: none;
 }
 .controls{
     display: flex;
@@ -71,4 +81,8 @@ ul li:hover{
 }
 .light ul li:hover{
     color: #000272;
+}
+Link{
+    text-decoration: none;
+    color: #fff;
 }
