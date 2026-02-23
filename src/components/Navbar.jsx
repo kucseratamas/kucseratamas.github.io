@@ -55,7 +55,9 @@ const Navbar = ({theme, setTheme}) => {
 
     return(
         <div className="navbar">
+            <Link to="/">
             <h1 className="portfolio">Portfolio</h1>
+            </Link>
             <ul>
                 <Link to="/"><li>Home</li></Link>
                 <Link to="/about"><li>About</li></Link>
