@@ -1,0 +1,136 @@
+.skills {
+    display: grid;
+    gap: 40px;
+    justify-content: center;
+    padding-top: 95px;
+}
+.skill-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.skills-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.skills .section{
+padding: 0 2.5%;
+}
+
+.subtitle {
+text-align: center;
+font-family: sans-serif;
+font-size:  25px;
+margin-top: 15px;
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  overflow: hidden;
+}
+
+.iconlogo {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+.skill-title {
+  font-size: 16px;
+  text-align: right;
+}
+
+.skills-header .text {
+  font-size: 18px;
+  opacity: 0.8;
+  margin-bottom: 100px;
+}
+
+.skills-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px 30px;
+  justify-items: center;
+
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+  padding-top: 40px; 
+
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+  max-width: 100vw;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  align-items: center;
+  
+}
+h2{
+    width: 100%;
+}
+.progress {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.skills h3{
+    text-align: right;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 1s ease;
+}
+.skills-row:nth-of-type(1) {
+  grid-template-columns: repeat(3, 300px);
+}
+.skills-row:nth-of-type(2) {
+  grid-template-columns: repeat(5, 300px);
+}
+
+.title {
+    font-family: sans-serif;
+    font-size: 58px;
+}
+
+.text {
+    font-family: sans-serif;
+    font-size: 20px;
+    max-width: 600px;
+}
+.dark .subtitle{
+    color: rgb(163, 163, 163);
+    transition: 1s;
+}
+
+.dark .skills {
+    background:#4b0404;
+
+    color: #fff;
+}
+
+.light .skills {
+    background: linear-gradient(
+        to top left,
+        #4b0404 10%,
+        #ffffff 70%
+    );
+    color: black;
+}
+
+.dark .text {
+    color: rgb(163, 163, 163);
+}
+
+.light .text {
+    color: rgb(63, 63, 63);
+}
