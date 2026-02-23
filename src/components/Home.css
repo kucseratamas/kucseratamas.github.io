@@ -83,11 +83,13 @@ section {
     flex-wrap: wrap;
     left: 10%;
     align-items: center;
+
+
 }
 .socialIcon{
     width: 50px;
     height: 50px;
-    object-fit: contain;
+
     cursor: pointer;
     transition: transform 0.2s ease, opacity 0.2s ease;
 }
