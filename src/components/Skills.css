@@ -1,3 +1,11 @@
+* {
+  scrollbar-width: none
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
 .skills {
     display: grid;
     gap: 40px;
@@ -9,6 +17,7 @@
   flex-direction: column;
   gap: 10px;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .skills-header {
@@ -70,6 +79,7 @@ margin-top: 15px;
   overflow-x: hidden;
   align-items: center;
   
+  overflow: visible;
 }
 h2{
     width: 100%;
@@ -79,7 +89,8 @@ h2{
   height: 6px;
   background: rgba(255, 255, 255, 0.15);
   border-radius: 10px;
-  overflow: hidden;
+  overflow: visible;
+  box-sizing: border-box;
 }
 .skills h3{
     text-align: right;
@@ -89,12 +100,6 @@ h2{
   height: 100%;
   border-radius: 10px;
   transition: width 1s ease;
-}
-.skills-row:nth-of-type(1) {
-  grid-template-columns: repeat(3, 300px);
-}
-.skills-row:nth-of-type(2) {
-  grid-template-columns: repeat(5, 300px);
 }
 
 .title {
@@ -113,15 +118,15 @@ h2{
 }
 
 .dark .skills {
-    background:#4b0404;
-
+    background-color: #05397e;
     color: #fff;
+    transition: 1s;
 }
 
 .light .skills {
     background: linear-gradient(
         to top left,
-        #4b0404 10%,
+        #05397e 10%,
         #ffffff 70%
     );
     color: black;
