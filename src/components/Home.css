@@ -82,8 +82,8 @@ section {
     margin-top: 30px;
     flex-wrap: wrap;
     left: 10%;
-    align-items: center;
-
+    overflow-x: hidden;
+    overflow: hidden;
 
 }
 .socialIcon{
@@ -139,7 +139,7 @@ section {
     background: linear-gradient(
     to top left, 
     #000000 20%,      
-    #4b0404 70%
+    #05397e 70%
 );
     color: #fff;
     transition: 1s;
@@ -148,7 +148,7 @@ section {
    background: linear-gradient(
     to top left, 
     #000000 20%,      
-    #004666e3 70%
+    hsl(248, 74%, 6%) 70%
 );
     color: #fff;
     transition: 1s; 
@@ -196,7 +196,7 @@ section {
 .light .homeSkills{
     background: linear-gradient(
     to top left,
-    #4b0404 10%, 
+    #05397e 10%, 
     #ffffff 70%,      
     rgb(255, 255, 255) 100%
 );
@@ -243,10 +243,10 @@ background-image: linear-gradient(to bottom right,rgba(105, 8, 8, 0.35),#0a5385)
 transition: 1s; 
 }
 .light .homeSkills .cvdownload{
-    background-image: linear-gradient(to bottom right,rgb(99, 99, 99),rgb(105, 8, 8),#00000065);
+    background-image: linear-gradient(to bottom right,rgb(99, 99, 99),#05397e,#000000);
 }
 .light .homeSkills .learnmore{
-   background-image: linear-gradient(to bottom right,rgb(99, 99, 99),rgb(105, 8, 8),#00000065);
+   background-image: linear-gradient(to bottom right,rgb(99, 99, 99),#05397e,#000000);
 }
 .light .homeAbout .cvdownload{
     background-image: linear-gradient(to bottom right,rgba(105, 8, 8, 0.35),#0a5385);
