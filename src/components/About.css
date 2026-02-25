@@ -1,0 +1,44 @@
+.about{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 10%;
+    transition: 1s ease;
+}
+.title{
+    font-family: sans-serif;
+    font-size: 58px;
+    padding-top: 15px;
+}
+.text{
+    font-family: sans-serif;
+    font-size:  20px;
+    max-width: 600px;
+    padding-bottom: 40px;
+
+}
+.dark .about{
+    background-color: #33057e;
+    color: #fff;
+    transition: 1s;
+}
+.light .about{
+    background: linear-gradient(
+    to top left, 
+    #05077e 10%,      
+    #ffffff 100%,    
+    rgb(255, 255, 255) 100%
+);
+    color: black;
+    transition: 1s;
+}
+.dark .text{
+    color: rgb(163, 163, 163);
+    transition: 1s;
+}
+.light .text{
+    color: rgb(63, 63, 63);
+    transition: 1s;
+}
