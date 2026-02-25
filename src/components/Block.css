@@ -19,12 +19,6 @@
     align-items: flex-start;
     gap: 10px;
 }
-
-
-.glass:hover {
-    transform: scale(1.08);
-}
-
 .glass h1 {
     font-family: sans-serif;
     font-size: 28px;
