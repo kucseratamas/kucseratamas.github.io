@@ -87,20 +87,24 @@ section {
 
 }
 .socialIcon{
-    width: 50px;
-    height: 50px;
-
+    width: 45px;
+    height: 45px;
     cursor: pointer;
     transition: transform 0.2s ease, opacity 0.2s ease;
 }
 .socialIcon:hover {
-    transform: scale(1.15);
+    transform: scale(1.04);
     opacity: 0.8;
 }
 .greeting{
     font-family: sans-serif;
     font-size: 58px;
     padding-top: 15px;
+    text-shadow:
+     -1px -1px 0 black,
+      1px -1px 0 black,
+     -1px  1px 0 black,
+      1px  1px 0 black;
 }
 .introduction{
     font-family: sans-serif;
@@ -137,30 +141,33 @@ section {
 }
 .dark .homeSkills{
     background: linear-gradient(
-    to top left, 
-    #000000 20%,      
-    #05397e 70%
+    to bottom right, 
+    #33057e 30%,      
+    #000000 70%,    
+    rgb(0, 0, 0) 100%
 );
     color: #fff;
     transition: 1s;
 }
 .dark .homeProjects{
    background: linear-gradient(
-    to top left, 
-    #000000 20%,      
-    hsl(248, 74%, 6%) 70%
+    to bottom right, 
+    #33057e 30%,      
+    #000000 70%,    
+    rgb(0, 0, 0) 100%
 );
     color: #fff;
     transition: 1s; 
 }
 .dark .homeHobbies{
    background: linear-gradient(
-    to top left,   
-    #000000 30%,  
-    #004666e3 70%
+    to bottom right, 
+    #33057e 30%,      
+    #000000 70%,    
+    rgb(0, 0, 0) 100%
 );
     color: #fff;
-    transition: 1s; 
+    transition: 1s;
 }
 .dark .homeContact{
    background: linear-gradient(
@@ -194,31 +201,30 @@ section {
     color: black;
 }
 .light .homeSkills{
-    background: linear-gradient(
-    to top left,
-    #05397e 10%, 
-    #ffffff 70%,      
+   background: linear-gradient(
+    to top left, 
+    #05077e 10%,      
+    #ffffff 100%,    
     rgb(255, 255, 255) 100%
 );
     color: black;
 }
 .light .homeProjects{
     background: linear-gradient(
-    to top left,
-    #004666e3 10%, 
-    #ffffff 70%,      
+    to top left, 
+    #05077e 10%,      
+    #ffffff 100%,    
     rgb(255, 255, 255) 100%
 );
     color: black;
 }
 .light .homeHobbies{
     background: linear-gradient(
-    to top left,
-    #004666e3 10%, 
-    #ffffff 70%,      
+    to top left, 
+    #05077e 10%,      
+    #ffffff 100%,    
     rgb(255, 255, 255) 100%
 );
-    color: black;
     color: black;
 }
 .light .homeContact{
@@ -287,16 +293,16 @@ transition: 1s;
 
 }
 .homeAbout .cvdownload{
-    background-image: linear-gradient(to bottom right,rgba(99, 99, 99, 0.39),rgba(105, 8, 8, 0.247),#00000065);
+    background-image: linear-gradient(to top left,rgba(0, 0, 0, 0),#5d42949f); 
 }
 .homeSkills .cvdownload{
-    background-image: linear-gradient(to bottom right,rgba(99, 99, 99, 0.39),rgba(105, 8, 8, 0.247),#00000065);
+    background-image: linear-gradient(to top left,rgba(0, 0, 0, 0),#5d42949f); 
 }
 .homeProjects .cvdownload{
-    background-image: linear-gradient(to bottom right,rgba(99, 99, 99, 0.39),#004666e3,#00000065);
+    background-image: linear-gradient(to top left,rgba(0, 0, 0, 0),#5d42949f); 
 }
 .homeHobbies .cvdownload{
-    background-image: linear-gradient(to bottom right,rgba(99, 99, 99, 0.39),#004666e3,#00000065);
+    background-image: linear-gradient(to top left,rgba(0, 0, 0, 0),#5d42949f); 
 }
 .homeContact .cvdownload{
     background-image: linear-gradient(to bottom right,rgba(99, 99, 99, 0.39),#aaaaaa3b,#00000065);
@@ -356,10 +362,7 @@ transition: 1s;
     
 }
 .homeProjects .learnmore{
-    background-image: linear-gradient(to bottom right,rgba(99, 99, 99, 0.39),#004666e3,#00000065);
-}
-.homeHobbies .learnmore{
-    background-image: linear-gradient(to bottom right,rgba(99, 99, 99, 0.39),#004666e3,#00000065);
+    background-image: linear-gradient(to bottom right,rgba(99, 99, 99, 0.39),rgba(105, 8, 8, 0.247),#00000065);
 }
 .homeContact .learnmore{
     background-image: linear-gradient(to bottom right,rgba(99, 99, 99, 0.39),#aaaaaa3b,#00000065);
@@ -389,4 +392,7 @@ transition: 1s;
 }
 .contactme:hover::before {
     opacity: 0.4;
+}
+.homepgae span{
+    color: rgb(226, 174, 4);;
 }
