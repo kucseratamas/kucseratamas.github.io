@@ -64,7 +64,7 @@ const others = [
         <h2 className="section">Languages</h2>
         <div className="skills-row">
             {languages.map((skill, i) => (
-            <Block key={i} className="skill-card">
+            <Block key={i} className="skill-card" width="545px">
                 <SkillContent skill={skill} />
             </Block>
             ))}

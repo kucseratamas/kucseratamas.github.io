@@ -5,7 +5,13 @@
 *::-webkit-scrollbar {
   display: none;
 }
-
+.skills .title{
+  text-shadow:
+     -1px -1px 0 black,
+      1px -1px 0 black,
+     -1px  1px 0 black,
+      1px  1px 0 black;
+}
 .skills {
     display: grid;
     gap: 40px;
@@ -108,18 +114,15 @@ h2{
 }
 
 .dark .skills {
-    background-color: #05397e;
+    background-color: #33057e;
     color: #fff;
     transition: 1s;
 }
 
 .light .skills {
-    background: linear-gradient(
-        to top left,
-        #05397e 10%,
-        #ffffff 70%
-    );
-    color: black;
+    background:
+        #ffffff;
+        color: black;
 }
 
 .dark .text {
