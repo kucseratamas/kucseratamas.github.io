@@ -1,44 +1,123 @@
-.about{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-    padding: 0 10%;
-    transition: 1s ease;
+.dark .about{
+  background-color: #33057e;
 }
-.title{
-    font-family: sans-serif;
-    font-size: 58px;
-    padding-top: 15px;
+.about .title{
+  margin-top: 58px;
+  text-shadow:
+     -1px -1px 0 black,
+      1px -1px 0 black,
+     -1px  1px 0 black,
+      1px  1px 0 black;
 }
-.text{
-    font-family: sans-serif;
-    font-size:  20px;
-    max-width: 600px;
-    padding-bottom: 40px;
+.dark .about .title{
+  color: #fff;
+}
+.about-header{
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 150px;
+}
+.timeline{
+  position: relative;
+  max-width: 3000px;
+  margin: 20px auto;
+  
+}
+.aboutblock {
+  position: relative;
+  width: 45%;
+  padding: 30px 20px;
+  margin-bottom: 80px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  color: #fff;
+  font-family: sans-serif;
+  transition: filter 0.5s ease;
 
 }
-.dark .about{
-    background-color: #33057e;
-    color: #fff;
+.aboutblock.left {
+  text-align: left;
+}
+
+.aboutblock.right {
+  text-align: left;
+}
+.left{
+  left: 5%;
+}
+.right{
+  left: 56%;
+}
+.timeline::after{
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  margin-left: -3px;
+  z-index: 1;
+  border-radius: 50px;
+
+  background: rgba(0, 0, 0, 0.308);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+}
+.abouttext1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: rgb(226, 174, 4);
+}
+
+.abouttext2 {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+.dark .abouttext1{
+    color: rgb(226, 174, 4);
     transition: 1s;
 }
-.light .about{
-    background: linear-gradient(
-    to top left, 
-    #05077e 10%,      
-    #ffffff 100%,    
-    rgb(255, 255, 255) 100%
-);
-    color: black;
+
+.dark .abouttext2{
+    color: rgb(224, 224, 224);
     transition: 1s;
 }
-.dark .text{
-    color: rgb(163, 163, 163);
-    transition: 1s;
+.timeline-marker {
+  position: absolute;
+  top: 50%;
+  width: 115px;
+  height: 6px;
+  background: rgba(0, 0, 0, 0.308);
+  z-index: 0;
+  border-radius: 50px;
 }
-.light .text{
-    color: rgb(63, 63, 63);
-    transition: 1s;
+
+.timeline-marker.left {
+  left: 50%;
+  transform: translateY(-50%);
+}
+
+.timeline-marker.right {
+  left: calc(50% - 115px);
+  transform: translateY(-50%);
+}
+.dark .about .glass:hover{
+filter: brightness(1.06);
+}
+.light .about .glass:hover{
+filter: brightness(0.96);
+}
+.about .learnmore{
+  margin-top: 25px;
+  align-self:flex-end;
+}
+.light .about .learnmore{
+  background:#00000065;
+  color: black;
 }
