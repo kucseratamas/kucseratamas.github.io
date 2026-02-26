@@ -1,8 +1,13 @@
 .projects{
     padding-top: 95px;
 }
-.projects .title{
+.title{
     margin-top: 50px;
+    text-shadow:
+     -1px -1px 0 black,
+      1px -1px 0 black,
+     -1px  1px 0 black,
+      1px  1px 0 black;
 }
 .feature {
   display: flex;

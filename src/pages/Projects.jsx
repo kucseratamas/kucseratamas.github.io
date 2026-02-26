@@ -36,7 +36,7 @@ const Projects = () => {
           <div className="feature-text">
               <h1 className='projecttext1'>Modelling</h1>
               <h2 className='projecttext2'>During development, different parts of the building had to be created using different methods. 
-                Some areas were reconstructed using photogrammetry, while others were manually modeled in Blender. Examples of both approaches are shown here. This is an example of a model that was created using photogrammetry.</h2>
+                Some areas were reconstructed using photogrammetry, while others were manually modeled in Blender. This is an example of a model that was created using photogrammetry.</h2>
             </div>
 
               <Block width="845px" height="500px">
