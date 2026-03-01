@@ -2,7 +2,8 @@
   background-color: #33057e;
 }
 .about .title{
-  margin-top: 58px;
+  font-size: 48px;
+  margin-top: 16px;
   text-shadow:
      -1px -1px 0 black,
       1px -1px 0 black,
@@ -19,59 +20,52 @@
   margin-top: 80px;
   margin-bottom: 150px;
 }
-.timeline{
+.timeline {
   position: relative;
-  max-width: 3000px;
-  margin: 20px auto;
-  
+  width: 100%;
 }
+
 .aboutblock {
   position: relative;
-  width: 45%;
-  padding: 30px 20px;
+  width: 60%;
+  height: 70%;
+  padding: 30px 25px;
   margin-bottom: 80px;
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(12px);
   border-radius: 20px;
   box-shadow: 0 8px 32px rgba(0,0,0,0.2);
-  color: #fff;
-  font-family: sans-serif;
   transition: filter 0.5s ease;
-
 }
+
 .aboutblock.left {
-  text-align: left;
+  left: 5%;
+  float: left;
+  clear: both;
 }
 
 .aboutblock.right {
-  text-align: left;
+  right: 5%;
+  float: right;
+  clear: both;
 }
-.left{
-  left: 5%;
-}
-.right{
-  left: 56%;
-}
-.timeline::after{
+
+.timeline::after {
   content: '';
   position: absolute;
   width: 6px;
   height: 100%;
   top: 0;
   left: 50%;
-  margin-left: -3px;
-  z-index: 1;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.3);
   border-radius: 50px;
-
-  background: rgba(0, 0, 0, 0.308);
-  backdrop-filter: blur(30px);
-  -webkit-backdrop-filter: blur(30px);
 }
 .abouttext1 {
   font-size: 36px;
   margin-bottom: 15px;
   font-weight: bold;
-  color: rgb(226, 174, 4);
+  color: rgb(0, 0, 0);
 }
 
 .abouttext2 {
@@ -80,32 +74,13 @@
   color: #e0e0e0;
 }
 .dark .abouttext1{
-    color: rgb(226, 174, 4);
+    color: rgb(255, 255, 255);
     transition: 1s;
 }
 
 .dark .abouttext2{
     color: rgb(224, 224, 224);
     transition: 1s;
-}
-.timeline-marker {
-  position: absolute;
-  top: 50%;
-  width: 115px;
-  height: 6px;
-  background: rgba(0, 0, 0, 0.308);
-  z-index: 0;
-  border-radius: 50px;
-}
-
-.timeline-marker.left {
-  left: 50%;
-  transform: translateY(-50%);
-}
-
-.timeline-marker.right {
-  left: calc(50% - 115px);
-  transform: translateY(-50%);
 }
 .dark .about .glass:hover{
 filter: brightness(1.06);
@@ -120,4 +95,23 @@ filter: brightness(0.96);
 .light .about .learnmore{
   background:#00000065;
   color: black;
+}
+@media (max-width: 900px) {
+  .aboutblock {
+    width: 90% !important;
+    float: none !important;
+    margin: 0 auto 50px auto;
+  }
+  .aboutblock.left{
+    left: 0%;
+    right: 0%;
+  }
+  .aboutblock.right{
+    left: 0%;
+    right: 0%;
+  }
+
+  .timeline::after {
+    left: 20px;
+  }
 }
