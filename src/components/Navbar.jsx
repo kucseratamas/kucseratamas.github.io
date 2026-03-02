@@ -16,11 +16,12 @@ const Navbar = ({theme, setTheme}) => {
     const happyAudio = useRef(new Audio(happyMusic));
 
     const [musicOn, setMusicOn] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
 
     const getAudioIcon = () => {
         if(theme === 'light') {
             return musicOn ? audioOn_logo_black : audioOff_logo_black;
-        }else {
+        } else {
             return musicOn ? audioOn_logo_blue : audioOff_logo_blue;
         }
     };
@@ -29,6 +30,7 @@ const Navbar = ({theme, setTheme}) => {
         rainAudio.current.loop = true;
         happyAudio.current.loop = true;
     },[]);
+
     const toggle_mode = () => {
         if (theme == 'light') {
             setTheme('dark')
@@ -37,9 +39,11 @@ const Navbar = ({theme, setTheme}) => {
             setTheme('light');
         }
     }
+
     const toggle_music = () => {
-    setMusicOn(prev => !prev);
-}
+        setMusicOn(prev => !prev);
+    }
+
     useEffect(()=>{
         rainAudio.current.pause();
         happyAudio.current.pause();
@@ -53,25 +57,33 @@ const Navbar = ({theme, setTheme}) => {
         }
     },[theme, musicOn]);
 
+    const closeMenu = () => setMenuOpen(false);
+
     return(
         <div className="navbar">
-            <Link to="/">
-            <h1 className="portfolio">Portfolio</h1>
+            <Link to="/" onClick={closeMenu}>
+                <h1 className="portfolio">Portfolio</h1>
             </Link>
-            <ul>
-                <Link to="/"><li>Home</li></Link>
-                <Link to="/about"><li>About</li></Link>
-                <Link to="/skills"><li>Skills</li></Link>
-                <Link to="/projects"><li>Projects</li></Link>
-                <Link to="/hobbies"><li>Hobbies</li></Link>
-                <Link to="/contact"><li>Contact</li></Link>
-            </ul>
-            <div className="controls">
-                <img onClick={toggle_music} src={getAudioIcon()} alt="" className="musicButton"/>
 
-                <img onClick={()=>toggle_mode()} src={theme == 'light' ? logo_light : logo_dark} alt="" className="toggleicon"/>
+            <ul className={menuOpen ? "nav-links open" : "nav-links"}>
+                <Link to="/" onClick={closeMenu}><li>Home</li></Link>
+                <Link to="/about" onClick={closeMenu}><li>About</li></Link>
+                <Link to="/skills" onClick={closeMenu}><li>Skills</li></Link>
+                <Link to="/projects" onClick={closeMenu}><li>Projects</li></Link>
+                <Link to="/hobbies" onClick={closeMenu}><li>Hobbies</li></Link>
+                <Link to="/contact" onClick={closeMenu}><li>Contact</li></Link>
+            </ul>
+
+            <div className="controls">
+                <div className="hamburger" onClick={() => setMenuOpen(prev => !prev)}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <img onClick={toggle_music} src={getAudioIcon()} alt="" className="musicButton"/>
+                <img onClick={toggle_mode} src={theme === 'light' ? logo_light : logo_dark} alt="" className="toggleicon"/>
             </div>
-            
         </div>
     )
 }
