@@ -1,0 +1,290 @@
+*{
+    text-decoration: none;
+}
+section {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.scroll-area {
+  height: 100vh;
+  scroll-snap-align: start;
+}
+.kalimba,
+.piano,
+.musicediting,
+.vectorart {
+  height: 100vh;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  gap: 20px;
+}
+.kalimba{
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: 1s ease;
+}
+.piano{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10%;
+    gap: 20px;
+    transition: 1s ease;
+}
+.musicediting{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10%;
+    gap: 20px;
+    transition: 1s ease;
+}
+.vectorart{
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: 1s ease;
+}
+.hobbiespage .greeting{
+    font-family: sans-serif;
+    font-size: 58px;
+    padding-top: 155px;
+
+    text-shadow:
+     -1px -1px 0 black,
+      1px -1px 0 black,
+     -1px  1px 0 black,
+      1px  1px 0 black;
+}
+.introduction{
+    font-family: sans-serif;
+    font-size:  20px;
+    max-width: 600px;
+    padding-bottom: 40px;
+
+}
+.kalimbaintroduction{
+     max-width: 1000px;
+     text-align: center;
+}
+.vectorintroduction{
+     max-width: 1000px;
+     text-align: center;
+}
+.dark .kalimba{
+    background: linear-gradient(
+    to bottom right, 
+    #33057e 30%,      
+    #000000 70%,    
+    rgb(0, 0, 0) 100%
+);
+    color: #fff;
+    transition: 1s;
+}
+.dark .piano{
+    background: linear-gradient(
+    to bottom right, 
+    #33057e 30%,      
+    #000000 70%,    
+    rgb(0, 0, 0) 100%
+);
+    color: #fff;
+    transition: 1s;
+}
+.dark .musicediting{
+    background: linear-gradient(
+    to bottom right, 
+    #33057e 30%,      
+    #000000 70%,    
+    rgb(0, 0, 0) 100%
+);
+    color: #fff;
+    transition: 1s;
+}
+.dark .vectorart{
+   background: linear-gradient(
+    to bottom right, 
+    #33057e 30%,      
+    #000000 70%,    
+    rgb(0, 0, 0) 100%
+);
+    color: #fff;
+    transition: 1s; 
+}
+.dark .introduction{
+    color: rgb(163, 163, 163);
+    transition: 1s;
+}
+.light .introduction{
+    color: rgb(63, 63, 63);
+    transition: 1s;
+}
+
+.contentslider {
+    width: 100%;
+    overflow: hidden;
+    padding: 10px 0;
+    pointer-events: none;
+}
+
+.contentslider-track {
+    display: flex;
+    width: max-content;
+    animation: scroll 40s linear infinite;
+    gap: 35px;
+    pointer-events: auto;
+}
+
+.contentslider::-webkit-scrollbar {
+    display: none;
+}
+.contentslider {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.contentslider:hover .contentslider-track{
+    animation-play-state: paused;
+}
+.thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.card {
+  flex: 0 0 auto;
+  width: 535px;
+  height: auto;
+  background: transparent;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 1;
+  text-decoration: none;
+  color: inherit;  
+}
+.card:visited {
+  color: inherit;
+}
+
+.thumbnail {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.card:hover .thumbnail {
+  transform: scale(1.05);
+  filter: brightness(0.85);
+}
+.artcard:hover .thumbnail {
+  transform: scale(1.05);
+  filter: brightness(0.85);
+}
+
+.covername {
+  color: rgb(196, 194, 194);
+  font-size: 18px;
+  text-align: center;
+  max-width: 90%;
+  text-decoration: none;
+  margin-top: 15px;
+}
+.light .covername{
+      color: black;
+}
+@keyframes scroll{
+    0%{
+        transform: translate(0);
+    }
+    100%{
+        transform: translateX(-50%);
+    }
+}
+
+.socialIcons{
+    display: flex;
+    gap: 35px;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    overflow: hidden;
+
+}
+.socialIcon{
+
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.hobbiespage .socialIcon:hover {
+    transform: scale(1.04);
+    opacity: 0.8;
+}
+.piano-flex {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+
+.piano-text {
+  flex: 1 1 400px; 
+  margin-top: 80px;
+}
+
+.insta-wrapper {
+  flex: 0 1 500px;    
+}
+.music-flex {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  
+}
+
+.music-text {
+  flex: 1 1 400px;
+  margin-bottom: 80px;
+}
+
+.musicproduction-wrapper {
+  flex: 0 1 850px;
+}
+
+.musicproductionimg {
+  width: 100%;
+  max-width: 1200px;
+  border-radius: 20px;
+}
+@media (max-width: 768px) {
+  .music-flex {
+    flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  .piano-flex {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
