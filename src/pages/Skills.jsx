@@ -26,11 +26,12 @@ import kdenlive from "../assets/kdenlive.png";
 import agisoft from "../assets/agisoftmetashape.png";
 
 const Skills = () => {
-    const languages = [
+  const languages = [
     { name: "C#", percent: 80, color: "#ff3c00", logo: csharp },
     { name: "JavaScript", percent: 70, color: "#ff9b3e", logo: javascript },
     { name: "Java", percent: 50, color: "#f1d78f", logo: java},
-    ];
+  ];
+
   const frameworkstoolswebtechnologies = [
     { name: "HTML5", percent: 70, color: "#0053c0", logo: html5} ,
     { name: "React", percent: 60, color: "#00a2ff", logo: react},
@@ -44,9 +45,9 @@ const Skills = () => {
     { name: "Git", percent: 85, color: "#001dc0", logo: git},
     { name: "Sourcetree", percent: 85, color: "#001dc0", logo: sourcetree},
     { name: "Intellij IDEA", percent: 70, color: "#0053c0", logo: intellijidea},
-    
-];
-const others = [
+  ];
+
+  const others = [
     { name: "Blender", percent: 60, color: "#00c6ff", logo: blender},
     { name: "Unity", percent: 70, color: "#00c6ff", logo: unity},
     { name: "Davinci Resolve", percent: 85, color: "#00c6ff", logo: davinciresolve},
@@ -54,41 +55,42 @@ const others = [
     { name: "Agisoft Metashape", percent: 70, color: "#00c6ff", logo: agisoft},
     { name: "Kdenlive", percent: 75, color: "#00c6ff", logo: kdenlive },
     { name: "Ableton Live", percent: 65, color: "#00c6ff", logo: ableton },
-];
+  ];
+
   return(
     <div className="skills">
-        <div className="skills-header">
+      <div className="skills-header">
             <h1 className="title">My Skills</h1>
             <h2 className="subtitle">Technologies and tools I use to build projects</h2>
         </div>
         <h2 className="section">Languages</h2>
-        <div className="skills-row">
+        <div className="skills-row sr1">
             {languages.map((skill, i) => (
-            <Block key={i} className="skill-card" width="545px">
+            <Block key={i} className="skill-card lngs" width="645px">
                 <SkillContent skill={skill} />
             </Block>
             ))}
         </div>
 
-        <h2 className="section">Frameworks / Tools / Web</h2>
-        <div className="skills-row sr2">
-            {frameworkstoolswebtechnologies.map((skill, i) => (
-            <Block key={i} className="skill-card">
-                <SkillContent skill={skill} />
-            </Block>
-            ))}
-        </div>
+      <h2 className="section">Frameworks / Tools / Web</h2>
+      <div className="skills-row sr2">
+        {frameworkstoolswebtechnologies.map((skill, i) => (
+          <Block key={i} className="skill-card">
+            <SkillContent skill={skill} />
+          </Block>
+        ))}
+      </div>
 
-        <h2 className="section">Others</h2>
-        <div className="skills-row">
-            {others.map((skill, i) => (
-            <Block key={i} className="skill-card">
-                <SkillContent skill={skill} />
-            </Block>
-            ))}
-        </div>
-
+      <h2 className="section">Others</h2>
+      <div className="skills-row">
+        {others.map((skill, i) => (
+          <Block key={i} className="skill-card">
+            <SkillContent skill={skill} />
+          </Block>
+        ))}
+      </div>
     </div>
   );
 }
-export default Skills
+
+export default Skills;
