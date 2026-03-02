@@ -1,7 +1,11 @@
 .projects{
     padding-top: 95px;
 }
+.projects .glass{
+  background: #00000071;
+}
 .title{
+  font-size: 48px;
     margin-top: 50px;
     text-shadow:
      -1px -1px 0 black,
