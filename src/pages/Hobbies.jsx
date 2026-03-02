@@ -252,7 +252,7 @@ const Hobbies = () => {
                     <div className="music-flex">
                         <div className="music-text">
                             <h1 className="greeting">Music Production</h1>
-                            <h2 className="introduction">Music production is another passion of mine. Using Ableton Live Lite, 
+                            <h2 className="introduction">Music production is another passion of mine. Using Ableton Live Lite and FL Studio, 
                                 I craft Lo-Fi tracks, and I’ve featured two of my original pieces directly on this site. Click the speaker icon to toggle the audio. 
                                 The soundtrack is context-aware: featuring a chill evening vibe for Dark Mode and a bright and sunny feel for Light Mode. 
                                 I'm also planning to launch a YouTube channel soon, where I'll be sharing more of my music!
