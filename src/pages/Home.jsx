@@ -47,10 +47,6 @@ const Home = () => {
                         You’ll find information about my skills, experience, educational background, achievements and a few words about my recent projects.
                     </h2>
                     <div className='homebuttons'>
-                        <a href={cv} download className="cvdownload">
-                            <img src={download} alt="" className="btnIcon" />
-                        Download CV
-                        </a>
                         <Link to="/about" className="learnmore">Learn More</Link>
                     </div>
                 </div>
@@ -61,10 +57,6 @@ const Home = () => {
                         This page provides a deeper look at my expertise and the tools I enjoy working with.
                     </h2>
                     <div className='homebuttons'>
-                        <a href={cv} download className="cvdownload">
-                            <img src={download} alt="" className="btnIcon" />
-                        Download CV
-                        </a>
                         <Link to="/skills" className="learnmore">Learn More</Link>
                     </div>
                 </div>
@@ -74,10 +66,6 @@ const Home = () => {
                     <h2 className="introduction">Through these projects, I have gained valuable experience and learned to work effectively with various tools, frameworks, engines and software.
                     </h2>
                     <div className='homebuttons'>
-                        <a href={cv} download className="cvdownload">
-                            <img src={download} alt="" className="btnIcon" />
-                        Download CV
-                        </a>
                         <Link to="/projects" className="learnmore">Learn More</Link>
                     </div>
                 </div>
@@ -88,10 +76,6 @@ const Home = () => {
                         Some are really interesting, so take a look!
                     </h2>
                     <div className='homebuttons'>
-                        <a href={cv} download className="cvdownload">
-                            <img src={download} alt="" className="btnIcon" />
-                        Download CV
-                        </a>
                         <Link to="/hobbies" className="learnmore">Learn More</Link>
                     </div>
                 </div>
@@ -101,10 +85,6 @@ const Home = () => {
                     <h2 className="introduction">You can find my contact information here to get in touch with me via email, social media, or phone.
                     </h2>
                     <div className='homebuttons'>
-                        <a href={cv} download className="cvdownload">
-                            <img src={download} alt="" className="btnIcon" />
-                        Download CV
-                        </a>
                         <Link to="/contact" className="learnmore">Learn More</Link>
                     </div>
                 </div>
