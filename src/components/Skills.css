@@ -57,7 +57,9 @@
 .skills .glass:hover{
   transform: scale(1.08);
 }
-
+.light .skills .glass{
+  background: rgb(235, 235, 235);
+}
 
 .skill-content {
   display: flex;
@@ -113,7 +115,7 @@
 }
 
 .dark .skills {
-    background-color: #33057e;
+    background-color: #08229c;
     color: #fff;
     transition: 1s;
 }
