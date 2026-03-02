@@ -25,7 +25,7 @@ const Projects = () => {
                  which is imported into a real-time virtual environment. 
                 The scene is optimized and enhanced with interactive elements, and the space can be explored immersively using a VR headset.</h2>
             </div>
-            <Block width="845px" height="460px">
+            <Block>
             <div className="feature-media">
               <img src={epuletkepek} alt="" />
             </div>
@@ -39,10 +39,10 @@ const Projects = () => {
                 Some areas were reconstructed using photogrammetry, while others were manually modeled in Blender. This is an example of a model that was created using photogrammetry.</h2>
             </div>
 
-              <Block width="845px" height="500px">
+              <Block>
                 <h4 className='sugo'>*This is an interactable 3D model*</h4>
             <div className="feature-media">
-              <Canvas style={{ height: '500px', width: '800px' }}>
+              <Canvas>
                 <ambientLight intensity={1} />
                 <OrbitControls />
                 <Suspense fallback={null}>
@@ -61,7 +61,7 @@ const Projects = () => {
                 Upon arrival, the destination is indicated by highlighting the selected room’s door with a flashing effect. 
                 Floor transitions within the virtual building are handled through UI-controlled teleportation.</h2>
             </div>
-            <Block width="845px" height="500px">
+            <Block>
             <div className="feature-media">
               <img src={navigation} alt="" />
             </div>
@@ -70,7 +70,7 @@ const Projects = () => {
         <h1 className='videotitle'>Full project demonstration video</h1>
         <section className="feature video">
           <div className="video-wrapper">
-            <Block width="1280px" height="720px">
+            <Block className="video-block">
             <iframe
             src="https://www.youtube.com/embed/HhQT_6A-rYs?si=jX4F0h9uyPXc297U" 
             title="YouTube video player" 

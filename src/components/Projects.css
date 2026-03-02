@@ -1,8 +1,8 @@
 .projects{
     padding-top: 95px;
 }
-.projects .glass{
-  background: #00000071;
+.light .glass{
+  background: rgb(235, 235, 235);
 }
 .title{
   font-size: 48px;
@@ -24,7 +24,7 @@
     margin: 0;
 }
 .dark .projects {
-    background-color: #33057e;
+    background-color: #08229c;
     color: #fff;
     transition: 1s;
 }
@@ -67,10 +67,18 @@
   opacity: 0.85;
 }
 
+.feature-media canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
 .feature-media {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  max-width: 845px;
+  aspect-ratio: 16 / 9;
 }
 
 .feature-media img,
@@ -82,10 +90,18 @@
 .feature.video {
   flex-direction: column;
   text-align: center;
-  margin-bottom: 100px;
+  width: 100%;
+  align-items: center;
 }
 
 .video-wrapper {
+  position: relative;
+  aspect-ratio: 16 / 9;
+}
+.video-wrapper {
+  width: 100%;
+  max-width: 1100px;
+  padding: 0;
   position: relative;
   aspect-ratio: 16 / 9;
 }
@@ -95,6 +111,14 @@
   height: 100%;
   border: none;
   border-radius: 20px;
+  display: block;
+}
+.video-block iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 20px;
+  display: block;
 }
 .feature-media canvas {
   animation: float 4s ease-in-out infinite;
@@ -107,4 +131,17 @@
     margin-bottom: 80px;
     margin-top: 200px;
 
+}
+.video-block {
+  width: 100%;
+  max-width: 1100px;
+  aspect-ratio: 16 / 9;
+  padding: 0;
+  display: block;
+}
+@media (max-width: 768px) {
+  .feature-media {
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
+  }
 }
