@@ -1,88 +1,71 @@
 .contact{
-    padding-top: 95px;
-    height: 100vh;
+    padding-top: clamp(60px, 8vh, 95px);
+    min-height: 100vh;
     transition: 1s ease;
 }
+
 .title{
-    margin-top: 50px;
+    margin-top: clamp(20px, 4vh, 50px);
     text-shadow:
      -1px -1px 0 black,
       1px -1px 0 black,
      -1px  1px 0 black,
       1px  1px 0 black;
 }
-.feature {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-  padding: 0 5%;
-}
-.contact-header h1 {
-    margin: 0;
-}
-.dark .contact {
-  background-color: #33057e;
-}
-.dark .title{
-    color: #ffffff;
-}
+
 .contact-header {
   text-align: center;
   font-family: sans-serif;
 }
+
+.contact-header h1 {
+    margin: 0;
+}
+
 .light .contact {
     background:#ffffff;
     color: black;
 }
-.insidemonitor{
-    position: relative;
+
+.dark .contact {
+  background-color: #08229c;
 }
+
+.dark .title{
+    color: #ffffff;
+}
+
 .insidemonitor {
     position: relative;
-    width: 100%;
-    max-width: 1200px;
+    width: clamp(280px, 90vw, 1200px);
     margin: 0 auto;
-
-    aspect-ratio: 1200 / 800; 
-    
+    aspect-ratio: 1200 / 800;
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+    transition: 0.5s ease-in;
 }
+
 .dark .insidemonitor{
-    height: 800px;
     background-image: url('../assets/Monitordark.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 1200px;
-    background-position: center;
-    background-repeat: no-repeat;
-    transition: 0.5s ease-in;
 }
+
 .light .insidemonitor{
-    height: 800px;
     background-image: url('../assets/Monitorlight.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 1200px;
-    background-position: center;
-    background-repeat: no-repeat;
-    transition: 0.5s ease-in;
 }
+
 .contact .socialIcons {
   position: absolute;
   left: 4%;
   top: 6%;
   display: grid;
   grid-template-columns: repeat(2, auto);
-  gap: 14px;
+  gap: clamp(8px, 1.5vw, 14px);
   z-index: 5;
 }
+
 .contact .socialIcon {
-  width: clamp(28px, 2.5vw, 40px);
+  width: clamp(20px, 2.2vw, 40px);
   height: auto;
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
@@ -91,30 +74,30 @@
   transform: scale(1.05);
   opacity: 0.85;
 }
-.monitor-wrapper {
-  position: relative;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+
 .textinfo{
     position:absolute;
     left: 69.5%;
     top: 21.5%;
-
-    gap: 14px;
     z-index: 5;
+    width: 25%;
 }
-.contact p{
-    font-size: 14px;
-    margin-bottom: 8px;
-}
+
 .contacttitle{
-    margin-bottom: 25px;
+    font-size: clamp(14px, 1.4vw, 28px);
+    margin-bottom: clamp(8px, 1.5vw, 25px);
+}
+
+.contact p{
+    font-size: clamp(10px, 0.9vw, 16px);
+    margin-bottom: clamp(4px, 0.8vw, 10px);
+    line-height: 1.4;
 }
 .light .contacttitle{
     color: black;
 }
-.dark .contact p, .contacttitle{
+
+.dark .contact p,
+.dark .contacttitle{
     color: #ffffff;
 }
