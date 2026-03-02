@@ -1,5 +1,5 @@
 .dark .about{
-  background-color: #33057e;
+  background-color: #08229c;
 }
 .about .title{
   font-size: 48px;
@@ -81,6 +81,9 @@
 .dark .abouttext2{
     color: rgb(224, 224, 224);
     transition: 1s;
+}
+.light .about .glass{
+  background: rgb(235, 235, 235);
 }
 .dark .about .glass:hover{
 filter: brightness(1.06);
