@@ -9,12 +9,6 @@ function SkillContent({ skill }) {
         <img src={skill.logo} alt="" className="iconlogo" />
         <h3 className="skill-title">{skill.name}</h3>
       </div>
-
-      <div className="skill-row">
-        <span>Proficiency</span>
-        <span> {skill.percent}%</span>
-      </div>
-
       <div className="progress">
         <div
           className="progress-fill"
