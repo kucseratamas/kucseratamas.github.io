@@ -19,27 +19,44 @@ const Home = () => {
     return(
         <section className='homepgae'>
             <div className="home scroll-area">
-                <div className="socialIcons">
-                    {socialIcons.map((item, index) => (
-                        <a key={index} href={item.url}target="_blank" rel="noreferrer">
-                            <div className='icon-wrapper'>
-                                <img src={item.icon} alt={item.alt} className="socialIcon"/>
-                            </div>
-                        </a>
-                    ))}
-                </div>
-                <h1 className="greeting">Hi, I'm <span>Tamás Kucsera</span></h1>
-                <h2 className="introduction">Computer Engineering graduate specialized in Software Design and Development.
-                Focused on VR, web and mobile application development.
-                </h2>
-                <div className='homebuttons'>
-                    <a href={cv} download className="cvdownload">
-                        <img src={download} alt="" className="btnIcon" />
-                    Download CV
+
+    <div className="homeContent">
+
+        <div className="homeLeft">
+            <div className="socialIcons">
+                {socialIcons.map((item, index) => (
+                    <a key={index} href={item.url} target="_blank" rel="noreferrer">
+                        <div className='icon-wrapper'>
+                            <img src={item.icon} alt={item.alt} className="socialIcon"/>
+                        </div>
                     </a>
-                    <Link to="/contact" className="contactme">Contact Me</Link>
-                </div>
+                ))}
             </div>
+
+            <h1 className="greeting">Hi, I'm <span>Tamás Kucsera</span></h1>
+
+            <h2 className="introduction">
+                Computer Engineering graduate specialized in Software Design and Development.
+                Focused on VR, web and mobile application development.
+            </h2>
+
+            <div className='homebuttons'>
+                <a href={cv} download className="cvdownload">
+                    <img src={download} alt="" className="btnIcon" />
+                    Download CV
+                </a>
+
+                <Link to="/contact" className="contactme">Contact Me</Link>
+            </div>
+        </div>
+
+        <div className="homeRight">
+            <div className="imagearea"></div>
+        </div>
+
+    </div>
+
+</div>
             
                 <div className="homeAbout scroll-area">
                     <h1 className="greeting">About <span>Me</span></h1>

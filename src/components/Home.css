@@ -1,310 +1,217 @@
-section {
-  height: 100vh;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
+*{
+    text-decoration: none;
 }
 
-.scroll-area {
-  height: 100vh;
-  scroll-snap-align: start;
+section{
+  height:100vh;
+  overflow-y:scroll;
+  scroll-snap-type:y mandatory;
 }
+
+.scroll-area{
+  height:100vh;
+  scroll-snap-align:start;
+}
+
 .home,
 .homeAbout,
 .homeSkills,
 .homeProjects,
 .homeHobbies,
-.homeContact {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 20px;
-  padding: 0 10%;
-}
-.home{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 10%;
-    gap: 20px;
-    transition: 1s ease;
-    padding-top: 60px;
-}
-.homeAbout{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 10%;
-    gap: 20px;
-    transition: 1s ease;
-}
-.homeSkills{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 10%;
-    gap: 20px;
-    transition: 1s ease;
-}
-.homeProjects{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 10%;
-    gap: 20px;
-    transition: 1s ease;
-}
-.homeHobbies{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 10%;
-    gap: 20px;
-    transition: 1s ease;
-}
 .homeContact{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 10%;
-    gap: 20px;
-    transition: 1s ease;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:0 10%;
+  gap:20px;
+  transition:1s ease;
 }
+
+.home{
+  padding-top:60px;
+}
+
+.homeContent{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:60px;
+  width:100%;
+}
+
+.homeLeft{
+  flex:1;
+  min-width:300px;
+}
+
+.homeRight{
+  flex:1;
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+}
+
+.imagearea{
+  width:clamp(700px,65vw,1000px);
+  height:clamp(800px,60vh,400px);
+  background-repeat:no-repeat;
+  background-position:right center;
+  background-size:cover;
+  transition:0.5s ease-in;
+}
+
+.dark .imagearea{
+  background-image:url('../assets/Instincto White.png');
+}
+
+.light .imagearea{
+  background-image:url('../assets/Instincto blue.png');
+}
+
 .socialIcons{
-    display: flex;
-    gap: 35px;          
-    margin-top: 30px;
-    flex-wrap: wrap;
-    left: 10%;
-    overflow-x: hidden;
-    overflow: hidden;
-
+  display:flex;
+  gap:35px;
+  margin-top:30px;
+  flex-wrap:wrap;
 }
+
 .socialIcon{
-    width: 45px;
-    height: 45px;
-    cursor: pointer;
-    transition: transform 0.2s ease, opacity 0.2s ease;
+  width:45px;
+  height:45px;
+  cursor:pointer;
+  transition:transform .2s ease, opacity .2s ease;
 }
-.socialIcon:hover {
-    transform: scale(1.04);
-    opacity: 0.8;
+
+.socialIcon:hover{
+  transform:scale(1.04);
+  opacity:0.8;
 }
+
 .greeting{
-    font-family: sans-serif;
-    font-size: 58px;
-    padding-top: 15px;
-    text-shadow:
-     -1px -1px 0 black,
-      1px -1px 0 black,
-     -1px  1px 0 black,
-      1px  1px 0 black;
+  font-family:sans-serif;
+  font-size:58px;
+  padding-top:15px;
+  text-shadow:
+   -1px -1px 0 black,
+    1px -1px 0 black,
+   -1px  1px 0 black,
+    1px  1px 0 black;
 }
+
 .introduction{
-    font-family: sans-serif;
-    font-size:  20px;
-    max-width: 600px;
-    padding-bottom: 40px;
-
-}
-.homeAbout .introduction{
-    font-family: sans-serif;
-    max-width: 600px;
-
-    
-}
-.dark .home{
-    background: linear-gradient(
-    to bottom right, 
-    #08229c 30%,      
-    #000000 70%,    
-    rgb(0, 0, 0) 100%
-);
-    color: #fff;
-    transition: 1s;
-}
-.dark .homeAbout{
-    background: linear-gradient(
-    to bottom right, 
-    #08229c 30%,      
-    #000000 70%,    
-    rgb(0, 0, 0) 100%
-);
-    color: #fff;
-    transition: 1s;
-}
-.dark .homeSkills{
-    background: linear-gradient(
-    to bottom right, 
-    #08229c 30%,      
-    #000000 70%,    
-    rgb(0, 0, 0) 100%
-);
-    color: #fff;
-    transition: 1s;
-}
-.dark .homeProjects{
-   background: linear-gradient(
-    to bottom right, 
-    #08229c 30%,      
-    #000000 70%,    
-    rgb(0, 0, 0) 100%
-);
-    color: #fff;
-    transition: 1s; 
-}
-.dark .homeHobbies{
-   background: linear-gradient(
-    to bottom right, 
-    #08229c 30%,      
-    #000000 70%,    
-    rgb(0, 0, 0) 100%
-);
-    color: #fff;
-    transition: 1s;
-}
-.dark .homeContact{
-   background: linear-gradient(
-    to bottom right, 
-    #08229c 30%,      
-    #000000 70%,    
-    rgb(0, 0, 0) 100%
-);
-    color: #fff;
-    transition: 1s; 
-}
-.dark .introduction{
-    color: rgb(163, 163, 163);
-    transition: 1s;
-}
-.light .home{
-    background:#ffffff;
-    color: black;
-}
-.light .introduction{
-    color: rgb(63, 63, 63);
-    transition: 1s;
-}
-.light .contactme{
-background-image: linear-gradient(to bottom right,rgb(99, 99, 99),#05397e,#000000);
-transition: 1s;
-}
-.light .cvdownload{
-background-image: linear-gradient(to bottom right,rgb(99, 99, 99),#05397e,#000000);
-transition: 1s; 
-}
-.light .learnmore{
-    background-image: linear-gradient(to bottom right,rgb(99, 99, 99),#05397e,#000000);
+  font-family:sans-serif;
+  font-size:20px;
+  max-width:600px;
+  padding-bottom:40px;
 }
 
-.homebuttons {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    left: 10%;
-    align-items: center;
-}
-.cvdownload {
-    font-family: sans-serif;
-    font-size: 20px;
-    padding: 15px 25px;
-    cursor: pointer;
-    color: rgb(224, 224, 224);
-    border: none;
-    border-radius: 50px;
-    display: inline-flex;
-    align-items: center;
-    text-decoration: none;
-    gap: 5px;
-    background-image: linear-gradient(to top left,rgba(0, 0, 0, 0),#3804a19f); 
-    position: relative;
-    overflow: hidden;
-    transition: color 0.3s ease;
-
-}
-.cvdownload::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: linear-gradient(to bottom, rgba(18, 8, 105, 0.35), #000000);
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    transition: 1s;
-    z-index: 0;
+.homebuttons{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+  align-items:center;
 }
 
-.cvdownload:hover::before {
-    opacity: 0.4;
-}
-
-.btnIcon {
-  width: 20px;
-  height: 20px;
-}
-.contactme {
-   font-family: sans-serif;
-    font-size: 20px;
-    padding: 15px 25px;
-    cursor: pointer;
-    color: rgb(224, 224, 224);
-    border: none;
-    border-radius: 50px;
-    display: inline-flex;
-    align-items: center;
-    text-decoration: none;
-    gap: 5px;
-    background-image: linear-gradient(to top left,rgba(0, 0, 0, 0),#3804a19f); 
-    position: relative;
-    overflow: hidden;
-    transition: color 0.3s ease;
-}
+.cvdownload,
+.contactme,
 .learnmore{
-    font-family: sans-serif;
-    font-size: 20px;
-    padding: 15px 25px;
-    cursor: pointer;
-    color: rgb(224, 224, 224);
-    border: none;
-    border-radius: 50px;
-    display: inline-flex;
-    align-items: center;
-    text-decoration: none;
-    gap: 5px;
-    background-image: linear-gradient(to top left,rgba(0, 0, 0, 0),#3804a19f); 
-    position: relative;
-    overflow: hidden;
-    transition: color 0.3s ease;
-    
+  font-family:sans-serif;
+  font-size:20px;
+  padding:15px 25px;
+  cursor:pointer;
+  color:rgb(224,224,224);
+  border:none;
+  border-radius:50px;
+  display:inline-flex;
+  align-items:center;
+  text-decoration:none;
+  gap:5px;
+  background-image:linear-gradient(to top left,rgba(0,0,0,0),#3804a19f);
+  position:relative;
+  overflow:hidden;
+  transition:color .3s ease;
 }
-.learnmore::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: linear-gradient(to bottom right, rgba(18, 8, 105, 0.35), #000000);
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    transition: 1s;
-    z-index: 0;
+
+.btnIcon{
+  width:20px;
+  height:20px;
 }
-.learnmore:hover::before {
-    opacity: 0.4;
+
+.cvdownload::before,
+.contactme::before,
+.learnmore::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:linear-gradient(to bottom right, rgba(18,8,105,.35), #000000);
+  opacity:0;
+  transition:opacity .4s ease;
+  z-index:0;
 }
-.contactme::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: linear-gradient(to bottom right, rgba(18, 8, 105, 0.35), #000000);
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    transition: 1s;
-    z-index: 0;
+
+.cvdownload:hover::before,
+.contactme:hover::before,
+.learnmore:hover::before{
+  opacity:.4;
 }
-.contactme:hover::before {
-    opacity: 0.4;
+
+.dark .home,
+.dark .homeAbout,
+.dark .homeSkills,
+.dark .homeProjects,
+.dark .homeHobbies,
+.dark .homeContact{
+  background:linear-gradient(
+  to bottom right,
+  #08229c 30%,
+  #000000 70%,
+  #000000 100%);
+  color:#fff;
+}
+
+.dark .introduction{
+  color:rgb(163,163,163);
+}
+
+.light .home{
+  background:#ffffff;
+  color:black;
+}
+
+.light .introduction{
+  color:rgb(63,63,63);
+}
+
+.light .contactme,
+.light .cvdownload,
+.light .learnmore{
+  background-image:linear-gradient(to bottom right,rgb(99,99,99),#05397e,#000000);
+}
+
+@media (max-width:900px){
+
+.homeContent{
+  flex-direction:column;
+  text-align:center;
+}
+
+.homeRight{
+  justify-content:center;
+}
+
+.imagearea{
+  width:clamp(320px,90vw,700px);
+  height:clamp(260px,45vh,400px);
+  background-position:center;
+}
+
+.greeting{
+  font-size:40px;
+}
+
+.introduction{
+  font-size:18px;
+}
+
 }
